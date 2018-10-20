@@ -11,7 +11,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(200, 195)
+        MainWindow.resize(202, 200)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.heroComboBox = QtWidgets.QComboBox(self.centralwidget)
@@ -25,9 +25,10 @@ class Ui_MainWindow(object):
         self.talentComboBox.setMinimumContentsLength(0)
         self.talentComboBox.setObjectName("talentComboBox")
         self.talentComboBox.addItem("")
-        self.textBrowser = QtWidgets.QTextBrowser(self.centralwidget)
-        self.textBrowser.setGeometry(QtCore.QRect(0, 60, 201, 131))
-        self.textBrowser.setObjectName("textBrowser")
+        self.label = QtWidgets.QLabel(self.centralwidget)
+        self.label.setGeometry(QtCore.QRect(40, 70, 141, 141))
+        self.label.setText("")
+        self.label.setObjectName("label")
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
