@@ -1,0 +1,2 @@
+heroes_build_scrapper
+pyqt5
