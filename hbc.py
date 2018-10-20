@@ -1,7 +1,7 @@
 import sys
 from PyQt5.QtWidgets import *
 import mainWindow
-from heroes_build_scrapper import get_heroes_list
+from heroes_build_scrapper import get_heroes_list, get_build_titles
 
 
 class Window(QMainWindow, mainWindow.Ui_MainWindow):
@@ -11,6 +11,12 @@ class Window(QMainWindow, mainWindow.Ui_MainWindow):
         self.setupUi(self)
         heroes = get_heroes_list()
         self.heroComboBox.addItems(heroes)
+        self.heroComboBox.currentIndexChanged.connect(self.selectionHero)
+
+    def selectionHero(self):
+        hero = self.heroComboBox.currentText()
+        titles = get_build_titles(hero)
+        self.talentComboBox.addItem(titles)
 
 
 if __name__ == '__main__':
