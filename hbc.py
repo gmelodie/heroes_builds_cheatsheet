@@ -17,12 +17,16 @@ class Window(QMainWindow, mainWindow.Ui_MainWindow):
         hero = self.heroComboBox.currentText()
         self.builds, self.titles = load_builds(hero)
         self.titles = [title.strip() for title in self.titles]
+        self.talentComboBox.clear()
+        self.talentComboBox.addItem('Choose build')
         self.talentComboBox.addItems(self.titles)
         self.talentComboBox.currentIndexChanged.connect(self.selectionTalent)
 
     def selectionTalent(self):
-        build_index = self.talentComboBox.currentIndex() - 1
-        self.label.setText(print_build(self.builds[build_index], self.titles[build_index]))
+        if self.talentComboBox.currentIndex() > 0:
+            build_title = self.talentComboBox.currentText()
+            build = self.builds[self.titles.index(build_title)]
+            self.label.setText(print_build(build, build_title))
 
 
 if __name__ == '__main__':
