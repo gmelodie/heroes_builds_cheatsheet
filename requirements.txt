@@ -1,2 +1,2 @@
-heroes_build_scrapper
+heroes_build_scrapper>=1.2
 pyqt5
