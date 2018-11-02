@@ -7,12 +7,17 @@
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtCore import Qt
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
+        MainWindow.setWindowModality(QtCore.Qt.NonModal)
         MainWindow.resize(202, 200)
+        MainWindow.setStyleSheet("")
+        MainWindow.setProperty("WindowStaysOnTopHint", True)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
+        self.centralwidget.setStyleSheet("")
         self.centralwidget.setObjectName("centralwidget")
         self.heroComboBox = QtWidgets.QComboBox(self.centralwidget)
         self.heroComboBox.setGeometry(QtCore.QRect(0, 0, 201, 25))
@@ -30,6 +35,13 @@ class Ui_MainWindow(object):
         self.label.setText("")
         self.label.setObjectName("label")
         MainWindow.setCentralWidget(self.centralwidget)
+
+        self.setAttribute(Qt.WA_TranslucentBackground)
+        self.setStyleSheet("background:transparent")
+        self.setAttribute(Qt.WA_NoSystemBackground)
+
+        self.setWindowFlags(Qt.WindowStaysOnTopHint)
+
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
