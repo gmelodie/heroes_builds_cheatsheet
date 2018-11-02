@@ -39,6 +39,10 @@ class Ui_MainWindow(object):
         self.setAttribute(Qt.WA_TranslucentBackground)
         self.setStyleSheet("background:transparent")
         self.setAttribute(Qt.WA_NoSystemBackground)
+
+        self.setWindowFlags(Qt.WindowStaysOnTopHint)
+
+
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
