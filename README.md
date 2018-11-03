@@ -1,5 +1,5 @@
 # Heroes Builds CheatSheet
-Easy in-game cheatsheet for builds on heroes of the storm
+Easy in-game cheatsheet for builds on Heroes of the Storm
 
 
 ## Installation
