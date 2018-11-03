@@ -36,9 +36,9 @@ class Ui_MainWindow(object):
         self.label.setObjectName("label")
         MainWindow.setCentralWidget(self.centralwidget)
 
-        self.setAttribute(Qt.WA_TranslucentBackground)
-        self.setStyleSheet("background:transparent")
-        self.setAttribute(Qt.WA_NoSystemBackground)
+        #self.setAttribute(Qt.WA_TranslucentBackground)
+        #self.setStyleSheet("background:transparent")
+        #self.setAttribute(Qt.WA_NoSystemBackground)
 
         self.setWindowFlags(Qt.WindowStaysOnTopHint)
 
