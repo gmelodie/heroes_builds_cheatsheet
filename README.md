@@ -4,6 +4,6 @@ Easy in-game cheatsheet for builds on Heroes of the Storm
 
 ## Installation
 
-To launch Heroes Builds CheatSheet (HBC) you must be running on Windows.
+To launch Heroes Builds CheatSheet (HBC) you need to be running on Windows.
 
-Simply [download this folder here,](build/exe.win32-3.6) run the exe and go play!
+Simply download or clone the repo, [run the exe file here](build/exe.win32-3.6) and go play!
