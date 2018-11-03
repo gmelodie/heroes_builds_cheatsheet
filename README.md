@@ -4,11 +4,6 @@ Easy in-game cheatsheet for builds on Heroes of the Storm
 
 ## Installation
 
-To run Heroes Builds CheatSheet (HBC) you may have [Python3](https://www.python.org/downloads/) installed
+To launch Heroes Builds CheatSheet (HBC) you must be running on Windows.
 
-HBC uses PyQt5 and Heroes Build Scrapper, simply install them using pip
-
-    pip install pyqt5
-    pip install heroes_build_scrapper
-
-After that, simply [get the exe file here](https://github.com/LTKills/heroes_builds_cheatsheet/releases) and go play!
+Simply [download this folder here,](build/exe.win32-3.6) run the exe and go play!
