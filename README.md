@@ -10,3 +10,5 @@ HBC uses PyQt5 and Heroes Build Scrapper, simply install them using pip
 
     pip install pyqt5
     pip install heroes_build_scrapper
+
+After that, simply [get the exe file here](https://github.com/LTKills/heroes_builds_cheatsheet/releases) and go play!
