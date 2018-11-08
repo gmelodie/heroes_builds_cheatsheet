@@ -29,7 +29,7 @@
    <property name="styleSheet">
     <string notr="true"/>
    </property>
-   <widget class="QComboBox" name="heroComboBox">
+   <widget class="ExtendedComboBox" name="heroComboBox">
     <property name="geometry">
      <rect>
       <x>0</x>
@@ -45,7 +45,7 @@
      <string/>
     </property>
     <property name="editable">
-     <bool>false</bool>
+     <bool>true</bool>
     </property>
     <item>
      <property name="text">
@@ -86,6 +86,13 @@
    </widget>
   </widget>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ExtendedComboBox</class>
+   <extends>QComboBox</extends>
+   <header location="global">extendedComboBox</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

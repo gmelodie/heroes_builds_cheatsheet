@@ -7,22 +7,22 @@
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-from PyQt5.QtCore import Qt
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.setWindowModality(QtCore.Qt.NonModal)
         MainWindow.resize(202, 200)
+        MainWindow.setWindowOpacity(1.0)
         MainWindow.setStyleSheet("")
         MainWindow.setProperty("WindowStaysOnTopHint", True)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setStyleSheet("")
         self.centralwidget.setObjectName("centralwidget")
-        self.heroComboBox = QtWidgets.QComboBox(self.centralwidget)
+        self.heroComboBox = ExtendedComboBox(self.centralwidget)
         self.heroComboBox.setGeometry(QtCore.QRect(0, 0, 201, 25))
         self.heroComboBox.setAccessibleName("")
-        self.heroComboBox.setEditable(False)
+        self.heroComboBox.setEditable(True)
         self.heroComboBox.setObjectName("heroComboBox")
         self.heroComboBox.addItem("")
         self.talentComboBox = QtWidgets.QComboBox(self.centralwidget)
@@ -35,6 +35,7 @@ class Ui_MainWindow(object):
         self.label.setText("")
         self.label.setObjectName("label")
         MainWindow.setCentralWidget(self.centralwidget)
+
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
@@ -45,3 +46,4 @@ class Ui_MainWindow(object):
         self.heroComboBox.setItemText(0, _translate("MainWindow", "Choose hero"))
         self.talentComboBox.setItemText(0, _translate("MainWindow", "Choose build"))
 
+from extendedComboBox import ExtendedComboBox
