@@ -1,2 +1,3 @@
-heroes_build_scrapper>=1.2
+heroes_build_scrapper==1.2
 pyqt5
+cx_Freeze
