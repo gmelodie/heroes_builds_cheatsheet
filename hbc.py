@@ -23,8 +23,6 @@ class Window(QMainWindow, mainWindow.Ui_MainWindow):
         self.setWindowFlags(Qt.WindowStaysOnTopHint)
         self.setWindowFlags(Qt.FramelessWindowHint | Qt.WindowStaysOnTopHint)
         self.setAttribute(Qt.WA_TranslucentBackground)
-        self.retranslateUi(MainWindow)
-        QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
 
 

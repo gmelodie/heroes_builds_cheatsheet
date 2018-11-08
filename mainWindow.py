@@ -12,7 +12,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.setWindowModality(QtCore.Qt.NonModal)
-        MainWindow.resize(202, 200)
+        MainWindow.resize(400, 400)
         MainWindow.setWindowOpacity(1.0)
         MainWindow.setStyleSheet("")
         MainWindow.setProperty("WindowStaysOnTopHint", True)
@@ -39,6 +39,10 @@ class Ui_MainWindow(object):
         self.label.setWordWrap(True)
         self.label.setStyleSheet("QLabel { color: white; qproperty-alignment: AlignCenter; background-color: rgba(0, 0, 0, 0.7); font-size: 15px; font-weight: bold; }")
         MainWindow.setCentralWidget(self.centralwidget)
+
+        # Careful, should replace this here every time this file changes
+        self.retranslateUi(MainWindow)
+        QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
