@@ -1,5 +1,6 @@
 import sys
 from PyQt5.QtWidgets import *
+from PyQt5.QtCore import Qt
 import mainWindow
 from heroes_build_scrapper import get_heroes_list, load_builds, print_build
 
@@ -12,6 +13,9 @@ class Window(QMainWindow, mainWindow.Ui_MainWindow):
         heroes = get_heroes_list()
         self.heroComboBox.addItems(heroes)
         self.heroComboBox.currentIndexChanged.connect(self.selectionHero)
+
+        # Custom editions on QMainWindow
+        self.setWindowFlags(Qt.WindowStaysOnTopHint)
 
     def selectionHero(self):
         hero = self.heroComboBox.currentText()
