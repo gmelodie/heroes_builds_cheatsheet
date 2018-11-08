@@ -12,7 +12,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.setWindowModality(QtCore.Qt.NonModal)
-        MainWindow.resize(202, 200)
+        MainWindow.resize(400, 400)
         MainWindow.setWindowOpacity(1.0)
         MainWindow.setStyleSheet("")
         MainWindow.setProperty("WindowStaysOnTopHint", True)
@@ -25,17 +25,22 @@ class Ui_MainWindow(object):
         self.heroComboBox.setEditable(True)
         self.heroComboBox.setObjectName("heroComboBox")
         self.heroComboBox.addItem("")
+        self.heroComboBox.setStyleSheet("QComboBox { color: white; background-color: rgba(0, 0, 0, 0.7); font-size: 15px; }")
         self.talentComboBox = QtWidgets.QComboBox(self.centralwidget)
         self.talentComboBox.setGeometry(QtCore.QRect(0, 30, 201, 25))
         self.talentComboBox.setMinimumContentsLength(0)
         self.talentComboBox.setObjectName("talentComboBox")
         self.talentComboBox.addItem("")
+        self.talentComboBox.setStyleSheet("QComboBox { color: white; background-color: rgba(0, 0, 0, 0.7); font-size: 15px; }")
         self.label = QtWidgets.QLabel(self.centralwidget)
-        self.label.setGeometry(QtCore.QRect(40, 70, 141, 141))
+        self.label.setGeometry(QtCore.QRect(0, 70, 201, 181))
         self.label.setText("")
         self.label.setObjectName("label")
+        self.label.setWordWrap(True)
+        self.label.setStyleSheet("QLabel { color: white; qproperty-alignment: AlignCenter; background-color: rgba(0, 0, 0, 0.7); font-size: 15px; font-weight: bold; }")
         MainWindow.setCentralWidget(self.centralwidget)
 
+        # Careful, should replace this here every time this file changes
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
