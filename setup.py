@@ -19,9 +19,9 @@ options = {
 }
 
 setup(
-    name = "<hbc>",
+    name = "hbc",
     options = options,
-    version = "<1.1>",
-    description = '<In-game cheatsheet for hero builds in Heroes of the Storm>',
+    version = "1.1",
+    description = 'In-game cheatsheet for hero builds in Heroes of the Storm',
     executables = executables
 )
